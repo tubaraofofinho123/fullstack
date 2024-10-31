@@ -1,6 +1,6 @@
-const bcryptjs = require("bcryptjs")
-const jwt = require("jsonwebtoken")
-const { User } = require("./db")
+import bcryptjs from "bcryptjs";
+import jwt from "jsonwebtoken";
+import { User } from "./db.js";
 
 const criarUsuario = async(req, res) => {
     try{
@@ -66,7 +66,4 @@ const login = async (req, res) => {
     }
 }
 
-module.exports = {
-    criarUsuario,
-    login
-}
+export default {criarUsuario, login}

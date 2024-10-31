@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Text, TextInput, View, StyleSheet, Image, Pressable } from "react-native";
 import InputPlace from "./inputPlace/InputPlace";
+import {Link} from "expo-router"
 
 
 export default Login = () => {
@@ -41,6 +42,8 @@ export default Login = () => {
             <View>
                 <InputPlace value={email} onChangeTextHandler={setEmail} icon={"https://cdn3.iconfinder.com/data/icons/essential-pack-2/48/8-Email-256.png"} label={"Email"} />
                 <InputPlace value={password} onChangeTextHandler={setPassword} icon={"https://cdn-icons-png.flaticon.com/512/696/696975.png"} label={"Senha"} />
+                <Link href={"/telaCadastro"}><Text style={{fontSize: 12}}>Não possui uma conta? Cadastre-se</Text></Link>
+
             </View>
 
             <Pressable style={styles.button} onPress={fetchData}><Text style={{ color: '#ffffff' }}>Login</Text></Pressable>

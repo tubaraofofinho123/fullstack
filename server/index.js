@@ -1,13 +1,14 @@
-import Express from "express"
-import bcryptjs from "bcryptjs"
-import { User,criarTabelas} from './db.js'
-import jwt from "jsonwebtoken" //npm i jsonwebtoken
-import cors from "cors"
-//O npm run dev funciona pois foi definido manualmente em "dev": "nodemon index.js"
+import Express from "express";
+import cors from "cors";
+import rotas from "./rotas.js";
 
-const app = Express()
-app.use(Express.json())
-app.use(cors())
-//criarTabelas()
+const app = Express();
+app.use(Express.json());
+app.use(cors());
+// criarTabelas();
 
-app.listen(8000)
+app.use("/", rotas);
+
+app.listen(8000, () => {
+  console.log('Servidor rodando na porta 8000');
+});
