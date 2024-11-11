@@ -1,6 +1,6 @@
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { User } from "./db.js";
+import { User } from "../db.js";
 
 const criarUsuario = async(req, res) => {
     try{
