@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { Text, TextInput, View, StyleSheet, Image, Pressable } from "react-native";
 import InputPlace from "./inputPlace/InputPlace";
